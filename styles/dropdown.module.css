@@ -1,0 +1,17 @@
+.children {
+  overflow: hidden;
+  transition: 0.5s;
+  transition-property: max-height;
+}
+
+.head {
+  cursor: pointer;
+}
+
+.full {
+  max-height: fit-content;
+}
+
+.collapsed {
+  max-height: 0;
+}

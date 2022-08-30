@@ -1,0 +1,212 @@
+.mainDiv {
+  position: absolute;
+  left: 70px;
+  top: 35px;
+}
+
+.searchBox {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 13px 20px;
+  position: absolute;
+  width: 400px;
+  height: 37px;
+
+  /* cool-gray/50 */
+
+  background: #f9fafb;
+  /* cool-gray/200 */
+
+  border: 1px solid #d3d5d8;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  left: 200px;
+  top: 10px;
+}
+
+.search {
+  width: 522.58px;
+  height: 24px;
+
+  /* text-base/font-normal */
+
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  /* cool-gray/500 */
+
+  color: #6b7280;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+
+  left: 210px;
+  top: 15px;
+}
+
+.addBtn {
+  /* Button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px;
+  gap: 8px;
+  position: absolute;
+  width: 113px;
+  height: 39px;
+  top: 7px;
+  left: 1020px;
+  /* Style */
+
+  background: #262626;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.addEmpBtn {
+  /* Button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px;
+  gap: 8px;
+  position: absolute;
+  width: 130px;
+  height: 39px;
+  top: 7px;
+  left: 1020px;
+  /* Style */
+
+  background: #262626;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.addSetProjBtn {
+  /* Button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px;
+  gap: 8px;
+  position: absolute;
+  width: 140px;
+  height: 39px;
+  top: 7px;
+  left: 1010px;
+  /* Style */
+
+  background: #262626;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.addSetProjBtn2 {
+  /* Button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px;
+  gap: 8px;
+  position: absolute;
+  width: 160px;
+  height: 39px;
+  top: 7px;
+  left: 990px;
+  /* Style */
+
+  background: #262626;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.btnText {
+  /* Text */
+
+  width: 63px;
+  height: 21px;
+  /* display: flow-root; */
+
+  /* text-sm/font-semibold */
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 21px */
+
+  /* white */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+  position: absolute;
+  top: 14px;
+  left: 1057px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.plus {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 1057px;
+}

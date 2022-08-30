@@ -1,0 +1,2 @@
+class MasterType < ApplicationRecord
+end

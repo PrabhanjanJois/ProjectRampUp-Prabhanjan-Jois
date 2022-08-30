@@ -1,0 +1,11 @@
+.bell {
+  position: absolute;
+  font-size: larger;
+  right: 60px;
+}
+
+.login {
+  position: absolute;
+  font-size: larger;
+  right: 20px;
+}

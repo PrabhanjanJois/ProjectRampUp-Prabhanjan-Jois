@@ -1,0 +1,54 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 1150px;
+  height: 76px;
+  background-color: #e5e7eb;
+  padding-left: 30px;
+}
+
+.leftPage {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  bottom: 25.06%;
+  background: url(../images/leftArrow.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.rightPage {
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  bottom: 25.06%;
+  background: url(../images/rightArrow.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paginationText {
+  width: 250px;
+  height: 21px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #454a58;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  position: absolute;
+  left: 10%;
+  letter-spacing: 1px;
+}

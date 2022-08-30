@@ -1,0 +1,132 @@
+.modalName {
+  position: absolute;
+  width: 200px;
+  height: 14px;
+  left: 20px;
+  top: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* 212121 */
+  color: #212121;
+}
+.modalName2 {
+  position: absolute;
+  width: 250px;
+  height: 14px;
+  left: 20px;
+  top: 110px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* 212121 */
+  color: #212121;
+}
+
+.modalName3 {
+  position: absolute;
+  width: 250px;
+  height: 14px;
+  left: 20px;
+  top: 290px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  /* 212121 */
+  color: #212121;
+}
+
+.modalNameInput {
+  box-sizing: border-box;
+  position: absolute;
+  width: 430px;
+  height: 30px;
+  left: 20px;
+  top: 95px;
+  background: #ffffff;
+  border: 1px solid #dcdce0;
+  border-radius: 6px;
+}
+
+.modalLatestInput {
+  box-sizing: border-box;
+  position: absolute;
+  width: 215px;
+  height: 30px;
+  left: 20px;
+  top: 350px;
+  background: #ffffff;
+  border: 1px solid #dcdce0;
+  border-radius: 6px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.modalCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px;
+  position: absolute;
+  width: 88px;
+  height: 42px;
+  left: 230px;
+  top: 420px;
+  /* white */
+  background: #ffffff;
+  /* cool-gray/300 */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  /* cool-gray/900 */
+  color: #111928;
+  cursor: pointer;
+}
+
+.modalAddProjectBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px;
+  position: absolute;
+  width: 130px;
+  height: 42px;
+  left: 320px;
+  top: 420px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  /* cool-gray/400 */
+  color: #9ca3af;
+  border: none;
+  cursor: pointer;
+}
