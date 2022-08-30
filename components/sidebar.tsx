@@ -57,36 +57,40 @@ const Sidebar = () => {
                 <span className={styles.oneSpan}>HEALTH</span>
               </li>
               <li className={styles.item} id="admin">
-                {/* <Link href="/adminusers"> */}
-                <a href="/adminusers" className={styles.menuBtn}>
-                  <FontAwesomeIcon
-                    className={styles.icon}
-                    icon={faUser}
-                    size={"xs"}
-                  />
-                  <span>Admin_Users</span>
-                </a>
-                {/* </Link> */}
+                <Link href="/adminusers">
+                  <a className={styles.menuBtn}>
+                    <FontAwesomeIcon
+                      className={styles.icon}
+                      icon={faUser}
+                      size={"xs"}
+                    />
+                    <span>Admin_Users</span>
+                  </a>
+                </Link>
               </li>
               <li className={styles.item} id="projects">
-                <a href="/projects" className={styles.menuBtn}>
-                  <FontAwesomeIcon
-                    className={styles.icon}
-                    icon={faClipboardList}
-                    size={"xs"}
-                  />
-                  <span>Projects</span>
-                </a>
+                <Link href="/projects">
+                  <a className={styles.menuBtn}>
+                    <FontAwesomeIcon
+                      className={styles.icon}
+                      icon={faClipboardList}
+                      size={"xs"}
+                    />
+                    <span>Projects</span>
+                  </a>
+                </Link>
               </li>
               <li className={styles.item} id="emp">
-                <a href="/employee" className={styles.menuBtn}>
-                  <FontAwesomeIcon
-                    className={styles.icon}
-                    icon={faUserGroup}
-                    size={"xs"}
-                  />
-                  <span>Employee</span>
-                </a>
+                <Link href="/employee">
+                  <a className={styles.menuBtn}>
+                    <FontAwesomeIcon
+                      className={styles.icon}
+                      icon={faUserGroup}
+                      size={"xs"}
+                    />
+                    <span>Employee</span>
+                  </a>
+                </Link>
               </li>
 
               <li
@@ -116,24 +120,30 @@ const Sidebar = () => {
                   }
                 >
                   <div className={styles.subMenu}>
-                    <a href="/settingsSkills">
-                      {/* <FontAwesomeIcon className={styles.icon} icon={faLock} /> */}
-                      <span>Skills</span>
-                    </a>
-                    <a href="/settingProj">
-                      {/* <FontAwesomeIcon
+                    <Link href="/settingsSkills">
+                      <a>
+                        {/* <FontAwesomeIcon className={styles.icon} icon={faLock} /> */}
+                        <span>Skills</span>
+                      </a>
+                    </Link>
+                    <Link href="/settingProj">
+                      <a>
+                        {/* <FontAwesomeIcon
                     className={styles.icon}
                     icon={faLanguage}
                   /> */}
-                      <span>Project type</span>
-                    </a>
-                    <a href="/settingEmp">
-                      {/* <FontAwesomeIcon
+                        <span>Project type</span>
+                      </a>
+                    </Link>
+                    <Link href="/settingEmp">
+                      <a>
+                        {/* <FontAwesomeIcon
                     className={styles.icon}
                     icon={faLanguage}
                   /> */}
-                      <span>Employee type</span>
-                    </a>
+                        <span>Employee type</span>
+                      </a>
+                    </Link>
                   </div>
                 </DropDown>
               </li>

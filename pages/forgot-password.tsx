@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const forgotpassword = () => {
@@ -34,9 +35,10 @@ const forgotpassword = () => {
           >
             <p className="inner-btn">Send Me Instructions</p>
           </button>
-          <a href="/loginpage" className="cancelButton">
-            Cancel
-          </a>
+          <Link href="/loginpage">
+            <a className="cancelButton"> </a>
+          </Link>
+          Cancel
         </div>
       </main>
     </div>
