@@ -12,10 +12,10 @@ const forgot2 = () => {
 
       <main className="main">
         <div>
-          {/* <Link href="/forgot-password">
+          <Link href="/forgot-password" className="BackButton">
             {" "}
-            <a className="BackButton">Back</a>
-          </Link> */}
+            Back
+          </Link>
 
           <div className="ForgotText">Check your email</div>
           <div className="ForgotText1">
@@ -24,11 +24,11 @@ const forgot2 = () => {
           </div>
           <div className="ForgotText2">
             To open your Gmail{" "}
-            {/* <Link href="https://mail.google.com/mail/u/0/#inbox">
+            <Link href="https://mail.google.com/mail/u/0/#inbox">
               <span style={{ color: "#1996FC" }} className="clickHereHover">
                 click here
               </span>
-            </Link> */}
+            </Link>
           </div>
           <div className="forgot2">
             Didn’t receive the email?
