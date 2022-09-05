@@ -15,10 +15,10 @@ const forgot4 = () => {
 
       <main className="main">
         <div>
-          <Link href="/forgot3">
+          {/* <Link href="/forgot3">
             {" "}
             <a className="BackButton">Back</a>
-          </Link>
+          </Link> */}
 
           <div className="ForgotText">Password reset</div>
           <div className="ForgotText1">

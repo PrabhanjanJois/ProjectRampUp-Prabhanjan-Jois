@@ -3,6 +3,7 @@ import pic1 from "../images/health-logo.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import pic2 from "../images/Vector.png";
+import styles from "../styles/all.module.css";
 
 import React, { useReducer, useEffect, useState } from "react";
 import { createStyles, makeStyles, Theme } from "@mui/material/styles";
@@ -12,8 +13,8 @@ import TextField from "@mui/material/TextField";
 import Head from "next/head";
 import { Button, Input } from "@mui/material";
 
-const tempEmail = "admin";
-const tempPassword = "admin@123";
+const tempEmail = "user";
+const tempPassword = "user@123";
 
 const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const passFormat =
@@ -105,11 +106,11 @@ const LoginPage = () => {
           <div>
             <div style={{ opacity: close ? "0" : "1" }}>
               <div
-                className="error-box"
+                className={styles.errorBox}
                 style={{ opacity: wrongPassword ? "1" : "0" }}
               >
-                <div className="rect-side"></div>
-                <div className="img-vector">
+                <div className={styles.rectSide}></div>
+                <div className={styles.imgVector}>
                   <Image
                     src={pic2}
                     height={35}
@@ -122,27 +123,27 @@ const LoginPage = () => {
                 </div>
 
                 <div>
-                  <p className="error-text">
+                  <p className={styles.errorText}>
                     This password is not correct. Try again
                     <span> or request a new password if you forgot.</span>
                   </p>
                 </div>
               </div>
             </div>
-            <div className="container-login">Log In</div>
+            <div className={styles.containerLogin}>Log In</div>
             <form>
-              <div className="greyEmail1">Email</div>
+              <div className={styles.greyEmail1}>Email</div>
               <input
-                className="input0"
+                className={styles.input0}
                 type="email"
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <div className="rect01"></div>
-              <div className="greyPass1">Password</div>
+              <div className={styles.rect01}></div>
+              <div className={styles.greyPass1}>Password</div>
               <input
-                className="input01"
+                className={styles.input01}
                 type={passwordShown ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -154,24 +155,24 @@ const LoginPage = () => {
                 } password-icon`}
                 onClick={togglePassword}
               />
-              <div className="rect012"></div>
-              <p className="hint">
+              <div className={styles.rect012}></div>
+              <p className={styles.hint}>
                 Minimum 8 characters with at least 1 number
               </p>
               <button
-                className="invalidSubmit"
+                className={styles.invalidSubmit}
                 onClick={handleLogin}
                 disabled={!email}
               >
-                <p className="login">Log In</p>
+                <p className={styles.login}>Log In</p>
               </button>
-              <p className="end-words">
+              <p className={styles.endWords}>
                 By signing in you agree to Health
-                <span className="clr"> Terms of service</span> and
-                <span className="clr"> Privacy policy.</span>
+                <span className={styles.clr}> Terms of service</span> and
+                <span className={styles.clr}> Privacy policy.</span>
               </p>
               <p
-                className="fgp"
+                className={styles.fgp}
                 onClick={() => {
                   router.push("/forgot-password");
                 }}

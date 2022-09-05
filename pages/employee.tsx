@@ -11,6 +11,8 @@ import TableComponent from "../components/employeeTable";
 import Modal from "../components/modalEmp";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+
+import ViewDetailsEmp from "../components/viewDetailsModals/EmpDetails";
 const contentsOnPage = 10;
 const Employee = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -22,7 +24,8 @@ const Employee = () => {
     { value: "Support", label: "Support" },
   ];
   // experiment
-
+  const [optionsMenu, setOptionsMenu] = useState<boolean>(false);
+  const [adminDetailsModal, setAdminDetailsModal] = useState<boolean>(false);
   const [addAdminModal, setAddAdminModal] = useState<boolean>(false);
   const [allChecked, setAllChecked] = useState<boolean>(false);
   const [currentPageData, setCurrentPageData] = useState<Array<any>>([]);
@@ -135,15 +138,17 @@ const Employee = () => {
       setCurrentPage((prev) => prev + 1);
     }
   };
+  const handleDetailClick = (): any => {
+    setOptionsMenu(false);
+    setAdminDetailsModal(true);
+  };
   return (
     <div>
       <Sidebar />
       <Topbar />
       <div className={styles.mainDiv}>
         <div>
-          <h2 style={{ fontSize: "20px", fontFamily: "sans-serif" }}>
-            Employee List
-          </h2>
+          <h2 style={{ fontSize: "18px", fontWeight: "600" }}>Employee List</h2>
         </div>
         <div className={styles.searchBox}> </div>
         <div className={styles.search}>Search</div>
@@ -165,6 +170,7 @@ const Employee = () => {
         tempAdminsData={tempEmpData}
         contentsOnPage={contentsOnPage}
         lastPage={lastPage}
+        detailsModal={handleDetailClick}
       />
       <Modal show={showModal} onClose={() => setShowModal(false)}>
         <div>
@@ -173,11 +179,11 @@ const Employee = () => {
               paddingLeft: "15px",
               position: "absolute",
               top: "0px",
-              fontFamily: `"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif`,
-              fontSize: "large",
+              fontSize: "18px",
+              fontWeight: "600",
             }}
           >
-            Add Project
+            Add Employee
           </h2>
           <h6 className={styles2.modalName}>NAME</h6>
           <input
@@ -296,6 +302,10 @@ const Employee = () => {
           <button className={styles2.modalAddProjectBtn}>Add Project</button>
         </div>
       </Modal>
+      <ViewDetailsEmp
+        openDetails={adminDetailsModal}
+        setOpenDetails={setAdminDetailsModal}
+      />
     </div>
   );
 };

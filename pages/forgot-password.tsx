@@ -16,10 +16,10 @@ const forgotpassword = () => {
 
       <main className="main">
         <div>
-          <Link href="/loginpage">
+          {/* <Link href="/loginpage">
             {" "}
             <a className="BackButton">Back</a>
-          </Link>
+          </Link> */}
 
           <div className="ForgotText">Forgot your Password</div>
           <div className="ForgotText1">
@@ -37,9 +37,9 @@ const forgotpassword = () => {
           >
             <p className="inner-btn">Send Me Instructions</p>
           </button>
-          <Link href="/loginpage">
+          {/* <Link href="/loginpage">
             <a className="cancelButton">Cancel</a>
-          </Link>
+          </Link> */}
         </div>
       </main>
     </div>

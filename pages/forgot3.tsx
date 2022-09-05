@@ -37,9 +37,9 @@ const forgot3 = () => {
 
       <main className="main">
         <div>
-          <Link href="loginpage">
+          {/* <Link href="loginpage">
             <a className="BackButton"> Back</a>
-          </Link>
+          </Link> */}
 
           <div className="ForgotText">Set new password</div>
           <div className="ForgotText1">
@@ -84,10 +84,10 @@ const forgot3 = () => {
           >
             <p className="inner-btn">Reset Password</p>
           </button>
-          <Link href="#">
+          {/* <Link href="#">
             {" "}
             <a className="cancelButton2">Cancel</a>
-          </Link>
+          </Link> */}
         </div>
       </main>
     </div>
