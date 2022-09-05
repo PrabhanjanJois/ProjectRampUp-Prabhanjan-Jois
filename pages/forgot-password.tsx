@@ -16,9 +16,11 @@ const forgotpassword = () => {
 
       <main className="main">
         <div>
-          <a href="#" className="BackButton">
-            Back
-          </a>
+          <Link href="/loginpage">
+            {" "}
+            <a className="BackButton">Back</a>
+          </Link>
+
           <div className="ForgotText">Forgot your Password</div>
           <div className="ForgotText1">
             Enter your email address, and we’ll send you an <br />
@@ -29,16 +31,15 @@ const forgotpassword = () => {
           <div className="emailRectangle"></div>
           <button
             className="InstructionButton"
-            onClick={() => {
-              router.push("/forgot2");
-            }}
+            // onClick={() => {
+            //   router.push("/forgot2");
+            // }}
           >
             <p className="inner-btn">Send Me Instructions</p>
           </button>
           <Link href="/loginpage">
-            <a className="cancelButton"> </a>
+            <a className="cancelButton">Cancel</a>
           </Link>
-          Cancel
         </div>
       </main>
     </div>

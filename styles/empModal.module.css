@@ -3,11 +3,11 @@
   width: 42px;
   height: 14px;
   left: 20px;
-  top: 40px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 50px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -34,11 +34,11 @@
   width: 51px;
   height: 14px;
   left: 20px;
-  top: 105px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 115px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -65,11 +65,11 @@
   width: 137px;
   height: 14px;
   left: 20px;
-  top: 170px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 180px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -96,11 +96,11 @@
   width: 250px;
   height: 14px;
   left: 240px;
-  top: 170px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 180px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -127,11 +127,11 @@
   width: 250px;
   height: 14px;
   left: 20px;
-  top: 235px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 245px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -157,11 +157,11 @@
   width: 250px;
   height: 14px;
   left: 240px;
-  top: 235px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 245px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -188,11 +188,11 @@
   width: 140px;
   height: 14px;
   left: 20px;
-  top: 300px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 310px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -219,11 +219,11 @@
   width: 170px;
   height: 14px;
   left: 240px;
-  top: 300px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 310px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -249,11 +249,11 @@
   width: 270px;
   height: 14px;
   left: 20px;
-  top: 370px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 380px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 100%;
   /* identical to box height, or 14px */
   display: flex;
@@ -291,10 +291,10 @@
   /* cool-gray/300 */
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 150%;
   /* identical to box height, or 24px */
   /* cool-gray/900 */
@@ -315,10 +315,10 @@
   top: 470px;
   background: #f6f6f6;
   border-radius: 6px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 150%;
   /* identical to box height, or 24px */
   /* cool-gray/400 */

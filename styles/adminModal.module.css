@@ -4,7 +4,7 @@
   position: "absolute";
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
 
 .box1 {
@@ -17,7 +17,7 @@
   top: 75px;
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 
   background: #ffffff;
   border: 1px solid #9a9ab1;
@@ -29,7 +29,7 @@
   padding-left: 30px;
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
 
 .box2 {
@@ -42,7 +42,7 @@
   top: 135px;
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 
   background: #ffffff;
   border: 1px solid #9a9ab1;
@@ -59,14 +59,14 @@
   position: "absolute";
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
 
 .role {
   position: relative;
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   /* padding-top: 10px;
   padding-right: 20px; */
   top: 8px;
@@ -75,7 +75,7 @@
   position: relative;
   font-size: small;
   font-weight: lighter;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   /* padding-top: 10px;
   padding-right: 20px; */
   top: 10px;

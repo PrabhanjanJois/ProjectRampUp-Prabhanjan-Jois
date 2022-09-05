@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const forgot3 = () => {
   const [password, setPassword] = useState("pass@123");
@@ -36,9 +37,10 @@ const forgot3 = () => {
 
       <main className="main">
         <div>
-          <a href="#" className="BackButton">
-            Back
-          </a>
+          <Link href="loginpage">
+            <a className="BackButton"> Back</a>
+          </Link>
+
           <div className="ForgotText">Set new password</div>
           <div className="ForgotText1">
             Your new password must be different from <br />
@@ -76,15 +78,16 @@ const forgot3 = () => {
           <div className="line-h2">Both password must match.</div>
           <button
             className="InstructionButton2"
-            onClick={() => {
-              router.push("/forgot4");
-            }}
+            // onClick={() => {
+            //   router.push("/forgot4");
+            // }}
           >
             <p className="inner-btn">Reset Password</p>
           </button>
-          <a href="#" className="cancelButton2">
-            Cancel
-          </a>
+          <Link href="#">
+            {" "}
+            <a className="cancelButton2">Cancel</a>
+          </Link>
         </div>
       </main>
     </div>

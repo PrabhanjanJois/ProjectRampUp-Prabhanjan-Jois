@@ -48,14 +48,14 @@ body {
   left: 3%;
 }
 
-.container-login {
+.containerLogin {
   position: absolute;
   width: 127px;
   height: 52px;
   left: 635px;
   top: 97px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 510;
   font-size: 38px;
@@ -74,7 +74,7 @@ body {
   left: 635px;
   top: 172px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -113,7 +113,7 @@ body {
   left: 635px;
   top: 245px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -152,7 +152,7 @@ body {
   left: 640px;
   top: 283px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -173,7 +173,7 @@ body {
   text-align: center;
   background: #d2d3d9;
   border-radius: 6px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -185,14 +185,14 @@ body {
   color: #ffffff;
 }
 
-.end-words {
+.endWords {
   position: absolute;
   width: 328px;
   height: 34px;
   left: 650px;
   top: 390px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -213,7 +213,7 @@ body {
   left: 737px;
   top: 430px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -264,7 +264,7 @@ body {
   height: 15px;
   left: 50px;
   top: 20px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -279,7 +279,7 @@ body {
   height: 30px;
   left: 450px;
   top: 120px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -293,7 +293,7 @@ body {
   height: 58px;
   left: 450px;
   top: 170px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -307,7 +307,7 @@ body {
   height: 15px;
   left: 450px;
   top: 240px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -354,7 +354,7 @@ body {
   height: 17px;
   left: 602px;
   top: 390px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -374,7 +374,7 @@ body {
   left: 450px;
   top: 240px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -391,7 +391,7 @@ body {
   left: 450px;
   top: 290px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -410,7 +410,7 @@ body {
   left: 450px;
   top: 370px;
 
-  font-family: "Inter";
+  /* font-family: "Inter"; */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -428,7 +428,7 @@ body {
   height: 15px;
   left: 450px;
   top: 320px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -475,7 +475,7 @@ body {
   height: 17px;
   left: 602px;
   top: 470px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -516,7 +516,7 @@ body {
   top: 347px;
 }
 
-.error-box {
+.errorBox {
   position: absolute;
   width: 410px;
   height: 100px;
@@ -528,14 +528,14 @@ body {
   border-radius: 4px;
 }
 
-.error-text {
+.errorText {
   position: absolute;
   width: 315px;
   height: 44px;
   left: 93px;
   top: 15px;
 
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -547,7 +547,7 @@ body {
   color: #eb5757;
 }
 
-.rect-side {
+.rectSide {
   position: absolute;
   width: 4px;
   height: 90px;
@@ -559,8 +559,32 @@ body {
   background: #eb5757;
 }
 
-.img-vector {
+.imgVector {
   position: absolute;
   left: 40px;
   top: 35px;
 }
+
+.invalidSubmit {
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  left: 640px;
+  top: 340px;
+  text-align: center;
+  background: #1996fc;
+  border-radius: 6px;
+  border-color: #ffffff;
+  /* font-family: sans-serif; */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  /* line-height: 17px; */
+  font-weight: 100;
+  cursor: pointer;
+  outline: none;
+}
+/* submit:disabled,
+button[disabled] {
+  background-color: #d2d3d9;
+} */

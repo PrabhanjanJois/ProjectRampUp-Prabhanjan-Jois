@@ -42,7 +42,7 @@ const LimitedWordTextarea = ({ rows, cols, value, limit }: any) => {
           height: "110px",
           position: "absolute",
           border: "2px solid #dcdce0",
-          fontFamily: `"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif`,
+          fontFamily: "Inter",
         }}
       />
       <p
@@ -50,8 +50,8 @@ const LimitedWordTextarea = ({ rows, cols, value, limit }: any) => {
           top: "275px",
           position: "absolute",
           right: "25px",
-          fontFamily: `"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif`,
-          fontSize: "15px",
+          fontFamily: "Inter",
+          fontSize: "12px",
         }}
       >
         {wordCount}/{limit}

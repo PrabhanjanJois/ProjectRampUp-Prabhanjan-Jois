@@ -23,6 +23,39 @@ body {
   }
 } */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap");
+
+body {
+  font-family: "Inter";
+}
+.span {
+  font-family: "Inter";
+}
+.h1 {
+  font-family: "Inter";
+}
+.h2 {
+  font-family: "Inter";
+}
+.h3 {
+  font-family: "Inter";
+}
+.h4 {
+  font-family: "Inter";
+}
+.h5 {
+  font-family: "Inter";
+}
+.h6 {
+  font-family: "Inter";
+}
+.div {
+  font-family: "Inter";
+}
+.p {
+  font-family: "Inter";
+}
+
 .container-div {
   display: flex;
   height: 100vh;
@@ -330,7 +363,23 @@ button[enabled] {
   line-height: 29px;
   color: #212121;
 }
+.ForgotText2 {
+  position: absolute;
+  width: 451px;
+  height: 58px;
+  left: 450px;
+  top: 225px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 29px;
+  color: #212121;
+}
 
+.clickHereHover {
+  cursor: pointer;
+}
 .greyEmail {
   position: absolute;
   width: 32px;
@@ -402,7 +451,7 @@ button[enabled] {
   width: 451px;
   height: 29px;
   left: 450px;
-  top: 240px;
+  top: 250px;
 
   font-family: sans-serif;
   font-style: normal;

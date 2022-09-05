@@ -11,6 +11,7 @@ import Modal from "../components/modalproj";
 import LimitedWordTextarea from "../components/textAreaInput";
 import styles2 from "../styles/skills.module.css";
 import Select from "react-select";
+import ViewDetailsProjType from "../components/viewDetailsModals/setProjType";
 
 const contentsOnPage = 10;
 const Settings = () => {
@@ -23,7 +24,8 @@ const Settings = () => {
     { value: "Support", label: "Support" },
   ];
   // experiment
-
+  const [optionsMenu, setOptionsMenu] = useState<boolean>(false);
+  const [adminDetailsModal, setAdminDetailsModal] = useState<boolean>(false);
   const [addAdminModal, setAddAdminModal] = useState<boolean>(false);
   const [allChecked, setAllChecked] = useState<boolean>(false);
   const [currentPageData, setCurrentPageData] = useState<Array<any>>([]);
@@ -81,13 +83,17 @@ const Settings = () => {
       setCurrentPage((prev) => prev + 1);
     }
   };
+  const handleDetailClick = () => {
+    setOptionsMenu(false);
+    setAdminDetailsModal(true);
+  };
   return (
     <div>
       <Sidebar />
       <Topbar />
       <div className={styles.mainDiv}>
         <div>
-          <h2 style={{ fontSize: "20px", fontFamily: "sans-serif" }}>Skills</h2>
+          <h2 style={{ fontSize: "18px", fontWeight: "600" }}>Project Type</h2>
         </div>
         <div className={styles.searchBox}> </div>
         <div className={styles.search}>Search</div>
@@ -109,6 +115,7 @@ const Settings = () => {
         tempAdminsData={tempAdminsData}
         contentsOnPage={contentsOnPage}
         lastPage={lastPage}
+        detailsModal={handleDetailClick}
       />
       <Modal show={showModal} onClose={() => setShowModal(false)}>
         <div>
@@ -117,11 +124,11 @@ const Settings = () => {
               paddingLeft: "15px",
               position: "absolute",
               top: "0px",
-              fontFamily: `"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif`,
               fontSize: "large",
+              fontWeight: "600",
             }}
           >
-            Add Project_Type
+            Add Project Type
           </h2>
           <h6 className={styles2.modalName}>PROJECT_TYPE NAME</h6>
           <input
@@ -129,9 +136,9 @@ const Settings = () => {
             type="text"
             placeholder="Enter"
           />
-          <h6 className={styles2.modalName2}>PROJECT_TYPE DESCRIPTION</h6>
+          <h6 className={styles2.modalName2}>PROJECT TYPE DESCRIPTION</h6>
           <LimitedWordTextarea limit={200} value={""} />
-          <h6 className={styles2.modalName3}>PROJECT_TYPE STATUS</h6>
+          <h6 className={styles2.modalName3}>PROJECT TYPE STATUS</h6>
           <div className={styles2.modalLatestInput}>
             <Select options={options} placeholder="Select Roles" />
           </div>
@@ -144,6 +151,10 @@ const Settings = () => {
           <button className={styles2.modalAddProjectBtn}>Add</button>
         </div>
       </Modal>
+      <ViewDetailsProjType
+        openDetails={adminDetailsModal}
+        setOpenDetails={setAdminDetailsModal}
+      />
     </div>
   );
 };

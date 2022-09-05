@@ -54,7 +54,12 @@ const Sidebar = () => {
                   />
                   {/* <span className={styles.oneSpan}>HEALTH</span> */}
                 </a>
-                <span className={styles.oneSpan}>HEALTH</span>
+                <span
+                  className={styles.oneSpan}
+                  style={{ fontFamily: "Inter", fontWeight: "600" }}
+                >
+                  HEALTH
+                </span>
               </li>
               <li className={styles.item} id="admin">
                 <Link href="/adminusers">
@@ -64,7 +69,7 @@ const Sidebar = () => {
                       icon={faUser}
                       size={"xs"}
                     />
-                    <span>Admin_Users</span>
+                    <span>Admin users</span>
                   </a>
                 </Link>
               </li>
@@ -132,7 +137,9 @@ const Sidebar = () => {
                     className={styles.icon}
                     icon={faLanguage}
                   /> */}
-                        <span>Project type</span>
+                        <span style={{ fontFamily: "Inter" }}>
+                          Project type
+                        </span>
                       </a>
                     </Link>
                     <Link href="/settingEmp">
@@ -141,7 +148,7 @@ const Sidebar = () => {
                     className={styles.icon}
                     icon={faLanguage}
                   /> */}
-                        <span>Employee alwasys</span>
+                        <span>Employee type</span>
                       </a>
                     </Link>
                   </div>

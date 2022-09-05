@@ -8,7 +8,7 @@
   left: 60px;
   width: 1150px;
   border-spacing: 0px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 .mainTable thead {
@@ -46,7 +46,7 @@
   /* width: 92px; */
   height: 24px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0px 5px;
   display: inline-block;
   color: #111928;
@@ -92,5 +92,12 @@
 } */
 
 .popUp {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Inter";
+  font-size: small;
+  cursor: pointer;
+}
+
+tr:hover .clickDetails {
+  background-color: #f3f4f6;
+  cursor: pointer;
 }

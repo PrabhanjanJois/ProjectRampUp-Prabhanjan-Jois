@@ -15,6 +15,7 @@ type tableAdminProps = {
   tempAdminsData: Array<any>;
   contentsOnPage: number;
   lastPage: number;
+  detailsModal: any;
 };
 
 const skillsTable = ({
@@ -27,11 +28,12 @@ const skillsTable = ({
   tempAdminsData,
   contentsOnPage,
   lastPage,
+  detailsModal,
 }: tableAdminProps) => {
   return (
     <table className={styles.mainTable}>
       <thead>
-        <tr>
+        <tr style={{ fontSize: "14px" }}>
           <td>
             <input
               type="checkbox"
@@ -61,7 +63,7 @@ const skillsTable = ({
       <tbody>
         {currentPageData.map((admin: Array<any>, index: number) => {
           return (
-            <tr>
+            <tr style={{ fontSize: "small" }}>
               <td>
                 <input
                   type="checkbox"
@@ -72,7 +74,14 @@ const skillsTable = ({
               </td>
               {admin.map((cell: string) => (
                 // eslint-disable-next-line react/jsx-key
-                <td>{cell}</td>
+                <td
+                  key={cell}
+                  className={styles.clickDetails}
+                  onClick={detailsModal}
+                  style={{ fontSize: "small" }}
+                >
+                  {cell}
+                </td>
               ))}
 
               <td>

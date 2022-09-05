@@ -11,6 +11,7 @@ import Modal from "../components/modalproj";
 import LimitedWordTextarea from "../components/textAreaInput";
 import styles2 from "../styles/skills.module.css";
 import Select from "react-select";
+import ViewDetailsEmpType from "../components/viewDetailsModals/setEmpType";
 
 const contentsOnPage = 10;
 const Settings = () => {
@@ -23,7 +24,8 @@ const Settings = () => {
     { value: "Support", label: "Support" },
   ];
   // experiment
-
+  const [optionsMenu, setOptionsMenu] = useState<boolean>(false);
+  const [adminDetailsModal, setAdminDetailsModal] = useState<boolean>(false);
   const [addAdminModal, setAddAdminModal] = useState<boolean>(false);
   const [allChecked, setAllChecked] = useState<boolean>(false);
   const [currentPageData, setCurrentPageData] = useState<Array<any>>([]);
@@ -81,13 +83,17 @@ const Settings = () => {
       setCurrentPage((prev) => prev + 1);
     }
   };
+  const handleDetailClick = () => {
+    setOptionsMenu(false);
+    setAdminDetailsModal(true);
+  };
   return (
     <div>
       <Sidebar />
       <Topbar />
       <div className={styles.mainDiv}>
         <div>
-          <h2 style={{ fontSize: "20px", fontFamily: "sans-serif" }}>Skills</h2>
+          <h2 style={{ fontSize: "18px", fontWeight: "600" }}>Employee Type</h2>
         </div>
         <div className={styles.searchBox}> </div>
         <div className={styles.search}>Search</div>
@@ -109,6 +115,7 @@ const Settings = () => {
         tempAdminsData={tempAdminsData}
         contentsOnPage={contentsOnPage}
         lastPage={lastPage}
+        detailsModal={handleDetailClick}
       />
       <Modal show={showModal} onClose={() => setShowModal(false)}>
         <div>
@@ -117,7 +124,7 @@ const Settings = () => {
               paddingLeft: "15px",
               position: "absolute",
               top: "0px",
-              fontFamily: `"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif`,
+              fontWeight: "600",
               fontSize: "large",
             }}
           >
@@ -144,6 +151,10 @@ const Settings = () => {
           <button className={styles2.modalAddProjectBtn}>Add</button>
         </div>
       </Modal>
+      <ViewDetailsEmpType
+        openDetails={adminDetailsModal}
+        setOpenDetails={setAdminDetailsModal}
+      />
     </div>
   );
 };

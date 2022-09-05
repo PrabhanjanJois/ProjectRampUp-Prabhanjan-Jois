@@ -4,6 +4,7 @@ import styles from "../styles/table.module.css";
 import Pagination from "./pagination";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import modal from "./modalUtiEmp";
 
 type tableAdminProps = {
   setAllChecked: any;
@@ -15,6 +16,7 @@ type tableAdminProps = {
   tempAdminsData: Array<any>;
   contentsOnPage: number;
   lastPage: number;
+  detailsModal: any;
 };
 
 const AdminTable = ({
@@ -27,11 +29,12 @@ const AdminTable = ({
   tempAdminsData,
   contentsOnPage,
   lastPage,
+  detailsModal,
 }: tableAdminProps) => {
   return (
     <table className={styles.mainTable}>
       <thead>
-        <tr>
+        <tr style={{ fontSize: "14px" }}>
           <td>
             <input
               type="checkbox"
@@ -76,7 +79,7 @@ const AdminTable = ({
       <tbody>
         {currentPageData.map((admin: Array<any>, index: number) => {
           return (
-            <tr>
+            <tr style={{ fontSize: "small" }}>
               <td>
                 <input
                   type="checkbox"
@@ -87,7 +90,14 @@ const AdminTable = ({
               </td>
               {admin.map((cell: string) => (
                 // eslint-disable-next-line react/jsx-key
-                <td>{cell}</td>
+                <td
+                  key={cell}
+                  className={styles.clickDetails}
+                  onClick={detailsModal}
+                  style={{ fontSize: "small" }}
+                >
+                  {cell}
+                </td>
               ))}
               <td>
                 <div>Admin</div>
@@ -100,11 +110,7 @@ const AdminTable = ({
                 <div>
                   {/* ⋮ */}
                   <Popup
-                    trigger={
-                      <span style={{ fontWeight: "bolder", fontSize: "20px" }}>
-                        ⋮
-                      </span>
-                    }
+                    trigger={<span style={{ fontWeight: "bolder" }}>⋮</span>}
                     position="right top"
                     on="hover"
                     closeOnDocumentClick

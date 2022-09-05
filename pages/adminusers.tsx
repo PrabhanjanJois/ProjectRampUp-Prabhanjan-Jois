@@ -12,6 +12,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
 import TableComponent from "../components/admintable";
+import ViewDetailsAdmin from "../components/viewDetailsModals/viewdetailsAdmin";
 
 const contentsOnPage = 10;
 
@@ -25,7 +26,8 @@ const AdminUsers = () => {
     { value: "Support", label: "Support" },
   ];
   // experiment
-
+  const [optionsMenu, setOptionsMenu] = useState<boolean>(false);
+  const [adminDetailsModal, setAdminDetailsModal] = useState<boolean>(false);
   const [addAdminModal, setAddAdminModal] = useState<boolean>(false);
   const [allChecked, setAllChecked] = useState<boolean>(false);
   const [currentPageData, setCurrentPageData] = useState<Array<any>>([]);
@@ -86,29 +88,30 @@ const AdminUsers = () => {
     }
   };
 
+  const handleDetailClick = () => {
+    setOptionsMenu(false);
+    setAdminDetailsModal(true);
+  };
   // experiment end
   return (
     <div>
-      <div>
-        <Sidebar />
-        <Topbar />
-        <div className={styles.mainDiv}>
-          <div>
-            <h2 style={{ fontSize: "20px", fontFamily: "sans-serif" }}>
-              Admin users
-            </h2>
-          </div>
-          <div className={styles.searchBox}> </div>
-          <div className={styles.search}>Search</div>
-          <button
-            className={styles.addBtn}
-            onClick={() => setShowModal(true)}
-            style={{ color: "white" }}
-          >
-            + Add user
-          </button>
+      <Sidebar />
+      <Topbar />
+      <div className={styles.mainDiv}>
+        <div>
+          <h2 style={{ fontSize: "18px", fontWeight: "600" }}>Admin users</h2>
         </div>
+        <div className={styles.searchBox}> </div>
+        <div className={styles.search}>Search</div>
+        <button
+          className={styles.addBtn}
+          onClick={() => setShowModal(true)}
+          style={{ color: "white" }}
+        >
+          + Add user
+        </button>
       </div>
+
       <TableComponent
         setAllChecked={setAllChecked}
         currentPageData={currentPageData}
@@ -119,6 +122,7 @@ const AdminUsers = () => {
         tempAdminsData={tempAdminsData}
         contentsOnPage={contentsOnPage}
         lastPage={lastPage}
+        detailsModal={handleDetailClick}
       />
 
       <Modal show={showModal} onClose={() => setShowModal(false)}>
@@ -159,6 +163,10 @@ const AdminUsers = () => {
           </button>
         </div>
       </Modal>
+      <ViewDetailsAdmin
+        openDetails={adminDetailsModal}
+        setOpenDetails={setAdminDetailsModal}
+      />
     </div>
   );
 };

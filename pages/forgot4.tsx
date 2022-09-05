@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const forgot4 = () => {
@@ -14,9 +15,11 @@ const forgot4 = () => {
 
       <main className="main">
         <div>
-          <a href="#" className="BackButton">
-            Back
-          </a>
+          <Link href="/forgot3">
+            {" "}
+            <a className="BackButton">Back</a>
+          </Link>
+
           <div className="ForgotText">Password reset</div>
           <div className="ForgotText1">
             Your password has been successfully reset. <br />
@@ -24,9 +27,9 @@ const forgot4 = () => {
           </div>
           <button
             className="InstructionButton3"
-            onClick={() => {
-              router.push("/loginpage");
-            }}
+            // onClick={() => {
+            //   router.push("/loginpage");
+            // }}
           >
             <p className="inner-btn">Continue</p>
           </button>
