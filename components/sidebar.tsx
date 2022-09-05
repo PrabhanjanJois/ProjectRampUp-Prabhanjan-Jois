@@ -141,7 +141,7 @@ const Sidebar = () => {
                     className={styles.icon}
                     icon={faLanguage}
                   /> */}
-                        <span>Employee type</span>
+                        <span>Employee alwasys</span>
                       </a>
                     </Link>
                   </div>
