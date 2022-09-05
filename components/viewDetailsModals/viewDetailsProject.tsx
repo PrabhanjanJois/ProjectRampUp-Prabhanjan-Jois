@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/ViewDetails.module.css";
+import styles from "../../styles/viewDetails.module.css";
 
 type AdminDetailsProps = {
   openDetails: boolean;
