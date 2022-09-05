@@ -13,7 +13,6 @@ const forgot2 = () => {
       <main className="main">
         <div>
           <Link href="/forgot-password" className="BackButton">
-            {" "}
             Back
           </Link>
 

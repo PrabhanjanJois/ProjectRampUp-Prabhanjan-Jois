@@ -85,7 +85,6 @@ const forgot3 = () => {
             <p className="inner-btn">Reset Password</p>
           </button>
           <Link href="#" className="cancelButton2">
-            {" "}
             Cancel
           </Link>
         </div>
