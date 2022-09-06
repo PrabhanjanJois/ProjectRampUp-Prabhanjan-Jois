@@ -15,10 +15,9 @@ const forgot4 = () => {
 
       <main className="main">
         <div>
-          <Link href="/forgot3" className="BackButton">
-            Back
+          <Link href="/loginpage">
+            <span className="BackButton">Back</span>
           </Link>
-
           <div className="ForgotText">Password reset</div>
           <div className="ForgotText1">
             Your password has been successfully reset. <br />
