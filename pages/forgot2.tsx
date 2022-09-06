@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Router from "next/router";
 
 const forgot2 = () => {
   return (
@@ -33,6 +34,17 @@ const forgot2 = () => {
             Didn’t receive the email?
             <span style={{ color: "#1996FC" }}> Click to resend</span>
           </div>
+          <div style={{ position: "absolute", top: "350px", left: "450px" }}>
+            Dummy button for reset password
+          </div>
+          <button
+            style={{ position: "absolute", top: "380px", left: "450px" }}
+            onClick={() => {
+              Router.push("/forgot3");
+            }}
+          >
+            reset password
+          </button>
         </div>
       </main>
     </div>
