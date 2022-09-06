@@ -33,6 +33,10 @@ const forgot3 = () => {
           rel="stylesheet"
           href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css"
         />
+        <link
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+          rel="stylesheet"
+        ></link>
       </Head>
 
       <main className="main">
