@@ -15,7 +15,9 @@ export default function middleware(req: any) {
   // }
 
   if (!verify && url.includes("/securedPages")) {
-    return NextResponse.redirect("https://rampup2-jois-proj.herokuapp.com/");
+    return NextResponse.redirect(
+      "https://rampup2-jois-proj.herokuapp.com/loginpage"
+    );
   }
 
   if (verify && url === "https://rampup2-jois-proj.herokuapp.com/") {
