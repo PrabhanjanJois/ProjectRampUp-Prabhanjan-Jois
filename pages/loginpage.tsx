@@ -159,6 +159,10 @@ const LoginPage = () => {
             rel="stylesheet"
             href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css"
           />
+          <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          ></link>
         </Head>
         <div className="conatiner-img">
           <Image src={pic} height={620} width={560} alt="" />
