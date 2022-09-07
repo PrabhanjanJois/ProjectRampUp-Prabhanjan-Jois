@@ -1,18 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Sidebar from "../components/sidebar";
-import Topbar from "../components/topbar";
-import styles from "../styles/pages.module.css";
-import styles2 from "../styles/empModal.module.css";
+import Sidebar from "../../components/sidebar";
+import Topbar from "../../components/topbar";
+import styles from "../../styles/pages.module.css";
+import styles2 from "../../styles/empModal.module.css";
 import Image from "next/image";
 import plus from "../images/plus.png";
 import { style } from "@mui/system";
 import { useEffect, useState } from "react";
-import TableComponent from "../components/employeeTable";
-import Modal from "../components/modalEmp";
+import TableComponent from "../../components/employeeTable";
+import Modal from "../../components/modalEmp";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-import ViewDetailsEmp from "../components/viewDetailsModals/EmpDetails";
+import ViewDetailsEmp from "../../components/viewDetailsModals/EmpDetails";
 const contentsOnPage = 10;
 const Employee = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -138,7 +138,7 @@ const Employee = () => {
       setCurrentPage((prev) => prev + 1);
     }
   };
-  const handleDetailClick = (): any => {
+  const handleDetailClick = () => {
     setOptionsMenu(false);
     setAdminDetailsModal(true);
   };

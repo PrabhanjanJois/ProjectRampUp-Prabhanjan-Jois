@@ -1,18 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Sidebar from "../components/sidebar";
-import Topbar from "../components/topbar";
-import styles from "../styles/pages.module.css";
+import Sidebar from "../../components/sidebar";
+import Topbar from "../../components/topbar";
+import styles from "../../styles/pages.module.css";
 import Image from "next/image";
 import plus from "../images/plus.png";
 import { style } from "@mui/system";
-import TableComponent from "../components/settingsComp/skillsTable";
+import TableComponent from "../../components/settingsComp/skillsTable";
 import { useEffect, useState } from "react";
 // import { Modal } from "@mui/material";
-import Modal from "../components/modalproj";
-import LimitedWordTextarea from "../components/textAreaInput";
-import styles2 from "../styles/skills.module.css";
+import Modal from "../../components/modalproj";
+import LimitedWordTextarea from "../../components/textAreaInput";
+import styles2 from "../../styles/skills.module.css";
 import Select from "react-select";
-import ViewDetailsSKills from "../components/viewDetailsModals/setSkills";
+import ViewDetailsSKills from "../../components/viewDetailsModals/setSkills";
 
 const contentsOnPage = 10;
 const Settings = () => {

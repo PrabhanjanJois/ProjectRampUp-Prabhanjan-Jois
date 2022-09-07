@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import pic2 from "../images/Vector.png";
 import styles from "../styles/all.module.css";
+import axios from "axios";
+import Cookies from "js-cookie";
 
 import React, { useReducer, useEffect, useState } from "react";
 import { createStyles, makeStyles, Theme } from "@mui/material/styles";
@@ -30,59 +32,121 @@ const LoginPage = () => {
   const [invalidPassword, setInvalidPassword] = useState(true);
   const [close, setClose] = useState<boolean>(false);
   const [loginClick, setLoginClick] = useState<boolean>(false);
-  const [splash, setSplash] = useState(true);
 
   const router = useRouter();
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log("the button has been clicked");
+  const formData = {
+    user: {
+      email: email,
+      password: password,
+    },
   };
 
+  async function handleSubmit1(e: any) {
+    e.preventDefault();
+    console.log("submit clicked");
+    const formData = {
+      user: {
+        email: email,
+        password: password,
+      },
+    };
+
+    await axios
+      .post(
+        "https://floating-falls-55336.herokuapp.com/users/sign_in",
+        formData
+      )
+      .then((response) => {
+        const res = response;
+        console.log(res);
+      })
+      .then((data) => {
+        console.log("Logged In Successfully:", data);
+        setEmail("");
+        setPassword("");
+        router.push("/securedPages/projects");
+        Cookies.set("loggedin", "true");
+      })
+      .catch((error) => {
+        console.log("wrong credentials, ");
+        console.log(error);
+      });
+  }
+  // const btnHandler = () => {
+  //   console.log("btn clicked");
+  //   axios
+  //     .post(
+  //       "https://floating-falls-55336.herokuapp.com/users/sign_in",
+  //       formData
+  //     )
+  //     .then((response) => {
+  //       const res = response;
+  //       console.log(res);
+  //     })
+  //     .then((data) => {
+  //       console.log("Logged In Succesfully:", data);
+  //       setEmail("");
+  //       setPassword("");
+  //       router.push("/adminusers");
+  //     })
+  //     .catch((error) => {
+  //       console.log("wrong credentials, ");
+  //       console.log(error);
+  //     });
+  // };
   const togglePassword = () => {
     setPasswordShown(passwordShown ? false : true);
   };
 
-  useEffect(() => {
-    setTimeout(() => setSplash(false), 3000);
-  }, []);
-  const handleLogin = () => {
-    setLoginClick(true);
-    if (email === tempEmail && password === tempPassword) {
-      setWrongUsername(false);
-      setWrongPassword(false);
-      router.push("/adminusers");
-    } else if (email !== tempEmail || password !== tempPassword) {
-      setWrongPassword(true);
-      setWrongUsername(true);
-    }
-  };
-
-  useEffect(() => {
-    if (mailFormat.test(email)) {
-      console.log("accepted");
-    } else {
-      console.log("rejected");
-    }
-  }, [email]);
-
-  useEffect(() => {
-    if (passFormat.test(password)) {
-      console.log("accepted");
-    } else {
-      console.log("rejected");
-    }
-  }, [password]);
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // useEffect(() => {
+  //   if (loginClick) {
+  //     setLoginClick(false);
+  //     if (wrongPassword || wrongUsername) {
+  //       setClose(false);
+  //     }
+  //   }
+  // });
+
+  //
+
+  // const [response,setResponse]=useState({
+  //   email:"",
+  //   password:""
+  // });
+  const [enable, setEnable] = useState(false);
+
+  const [error, setError] = useState(false);
+
   useEffect(() => {
-    if (loginClick) {
-      setLoginClick(false);
-      if (wrongPassword || wrongUsername) {
-        setClose(false);
-      }
+    if (!loginClick) {
+      console.log("click login");
+    } else {
+      axios
+        .post("https://floating-falls-55336.herokuapp.com/users/sign_in", {
+          user: {
+            email: email,
+            password: password,
+          },
+        })
+        .then((response) => {
+          console.log(response);
+          setEnable(true);
+          setError(false);
+        })
+        .then((data) => {
+          console.log("Logged In Succesfully:", data);
+          setEmail("");
+          setPassword("");
+          router.push("/adminusers");
+        })
+        .catch(() => {
+          setError(true);
+          setEnable(false);
+        });
     }
-  });
+  }, [email, loginClick, password, router]);
+
   return (
     <>
       <div>
@@ -95,10 +159,6 @@ const LoginPage = () => {
             rel="stylesheet"
             href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css"
           />
-          <link
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-            rel="stylesheet"
-          ></link>
         </Head>
         <div className="conatiner-img">
           <Image src={pic} height={620} width={560} alt="" />
@@ -151,7 +211,7 @@ const LoginPage = () => {
                 type={passwordShown ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                name="email"
+                name="password"
               />
               <i
                 className={`fa ${
@@ -165,8 +225,10 @@ const LoginPage = () => {
               </p>
               <button
                 className={styles.invalidSubmit}
-                onClick={handleLogin}
+                // onClick={() => setLoginClick(true)}
+                onClick={handleSubmit1}
                 disabled={!email}
+                type="submit"
               >
                 <p className={styles.login}>Log In</p>
               </button>
@@ -183,6 +245,12 @@ const LoginPage = () => {
               >
                 Forgot your password
               </p>
+              {/* <button
+                onClick={btnHandler}
+                style={{ position: "absolute", top: "500px", right: "100px" }}
+              >
+                login 2
+              </button> */}
             </form>
           </div>
         </div>

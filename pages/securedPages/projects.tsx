@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Sidebar from "../components/sidebar";
-import Topbar from "../components/topbar";
-import styles from "../styles/pages.module.css";
+import Sidebar from "../../components/sidebar";
+import Topbar from "../../components/topbar";
+import styles from "../../styles/pages.module.css";
 import Image from "next/image";
 import plus from "../images/plus.png";
 import { style } from "@mui/system";
@@ -9,19 +9,19 @@ import { style } from "@mui/system";
 // import Sidebar from "../components/sidebar";
 // import Topbar from "../components/topbar";
 // import styles from "../styles/pages.module.css";
-import styles2 from "../styles/projModal.module.css";
+import styles2 from "../../styles/projModal.module.css";
 // import Image from "next/image";
 
 import { useEffect, useState } from "react";
-import Modal from "../components/modalproj";
+import Modal from "../../components/modalproj";
 import { ClassNames } from "@emotion/react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
-import TableComponent from "../components/projectTable";
+import TableComponent from "../../components/projectTable";
 import Head from "next/head";
 
-import ViewDetailsProject from "../components/viewDetailsModals/viewDetailsProject";
+import ViewDetailsProject from "../../components/viewDetailsModals/viewDetailsProject";
 
 const contentsOnPage = 10;
 
@@ -252,6 +252,10 @@ const Projects = () => {
     setAdminDetailsModal(true);
   };
 
+  useEffect(() => {
+    console.log("hiding the black icon");
+  }, []);
+
   return (
     <div>
       {/* <Head>
@@ -313,7 +317,7 @@ const Projects = () => {
             type="text"
             placeholder="Harvard University"
           />
-          <h6 className={styles2.modalProjectType}>PROJECT_TYPE</h6>
+          <h6 className={styles2.modalProjectType}>PROJECT TYPE</h6>
           <select
             className={styles2.modalProjectTypeInput}
             name=""

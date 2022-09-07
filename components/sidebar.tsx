@@ -62,7 +62,7 @@ const Sidebar = () => {
                 </span>
               </li>
               <li className={styles.item} id="admin">
-                <Link href="/adminusers">
+                <Link href="/securedPages/adminusers">
                   <a className={styles.menuBtn}>
                     <FontAwesomeIcon
                       className={styles.icon}
@@ -74,7 +74,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className={styles.item} id="projects">
-                <Link href="/projects">
+                <Link href="/securedPages/projects">
                   <a className={styles.menuBtn}>
                     <FontAwesomeIcon
                       className={styles.icon}
@@ -86,7 +86,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className={styles.item} id="emp">
-                <Link href="/employee">
+                <Link href="/securedPages/employee">
                   <a className={styles.menuBtn}>
                     <FontAwesomeIcon
                       className={styles.icon}
@@ -125,13 +125,13 @@ const Sidebar = () => {
                   }
                 >
                   <div className={styles.subMenu}>
-                    <Link href="/settingsSkills">
+                    <Link href="/securedPages/settingsSkills">
                       <a>
                         {/* <FontAwesomeIcon className={styles.icon} icon={faLock} /> */}
                         <span>Skills</span>
                       </a>
                     </Link>
-                    <Link href="/settingProj">
+                    <Link href="/securedPages/settingProj">
                       <a>
                         {/* <FontAwesomeIcon
                     className={styles.icon}
@@ -142,7 +142,7 @@ const Sidebar = () => {
                         </span>
                       </a>
                     </Link>
-                    <Link href="/settingEmp">
+                    <Link href="/securedPages/settingEmp">
                       <a>
                         {/* <FontAwesomeIcon
                     className={styles.icon}

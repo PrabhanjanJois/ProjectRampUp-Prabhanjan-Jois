@@ -1,22 +1,34 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Sidebar from "../components/sidebar";
-import Topbar from "../components/topbar";
-import styles from "../styles/pages.module.css";
-import styles2 from "../styles/adminModal.module.css";
+import Sidebar from "../../components/sidebar";
+import Topbar from "../../components/topbar";
+import styles from "../../styles/pages.module.css";
+import styles2 from "../../styles/adminModal.module.css";
 import Image from "next/image";
 
 import { useEffect, useState } from "react";
-import Modal from "../components/modal";
+import Modal from "../../components/modal";
 import { ClassNames } from "@emotion/react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
-import TableComponent from "../components/admintable";
-import ViewDetailsAdmin from "../components/viewDetailsModals/viewdetailsAdmin";
+import TableComponent from "../../components/admintable";
+import ViewDetailsAdmin from "../../components/viewDetailsModals/viewdetailsAdmin";
+
+import { useSession } from "next-auth/react";
+import Router from "next/router";
 
 const contentsOnPage = 10;
 
 const AdminUsers = () => {
+  //
+
+  // const { status, data } = useSession();
+
+  // useEffect(() => {
+  //   if (status === "unauthenticated") Router.replace("/auth/signin");
+  // }, [status]);
+
+  //
   const [showModal, setShowModal] = useState<boolean>(false);
   const [phone, setPhone] = useState<any>(" ");
 
