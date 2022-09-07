@@ -14,7 +14,7 @@ import Select from "react-select";
 import TableComponent from "../../components/admintable";
 import ViewDetailsAdmin from "../../components/viewDetailsModals/viewdetailsAdmin";
 
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 import Router from "next/router";
 
 const contentsOnPage = 10;
