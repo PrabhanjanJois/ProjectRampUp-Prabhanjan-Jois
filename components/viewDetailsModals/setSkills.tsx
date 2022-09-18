@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-//import styles from "./ViewDetails.module.css";
+import styles from "../../styles/viewDetails.module.css";
 
 type AdminDetailsProps = {
   openDetails: boolean;
@@ -27,7 +27,7 @@ const ViewDetailsAdmin = ({
         style={{
           display: openDetails ? "block" : "none",
         }}
-        // className={styles.modalBG}
+        className={styles.modalBG}
       ></div>
       <div
         style={{ display: openDetails ? "block" : "none" }}
@@ -54,9 +54,8 @@ const ViewDetailsAdmin = ({
           >
             View Details
           </h1>
-
           <div
-            //className={styles.modalClose}
+            className={styles.modalClose}
             onClick={() => setOpenDetails(false)}
             style={{ position: "absolute", top: "16px", left: "540px" }}
           ></div>
