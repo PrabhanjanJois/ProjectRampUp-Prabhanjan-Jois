@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import styles from "../../styles/ViewDetails.module.css";
+import styles from "./ViewDetails.module.css";
 
 type AdminDetailsProps = {
   openDetails: boolean;
