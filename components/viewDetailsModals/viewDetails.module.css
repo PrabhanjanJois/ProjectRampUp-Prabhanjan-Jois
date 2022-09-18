@@ -10,7 +10,7 @@
 
 .modalClose {
   cursor: pointer;
-  background: url(../images/close-icon.png);
+  background: url(../../images/close-icon.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 13px;
