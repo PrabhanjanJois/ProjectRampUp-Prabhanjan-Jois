@@ -1,14 +1,16 @@
 import React from "react";
-import styles from "../../styles/viewDetails.module.css";
+import styles from "../../styles/ViewDetails.module.css";
 
 type AdminDetailsProps = {
   openDetails: boolean;
   setOpenDetails: any;
+  sentData: any;
 };
 
 const ViewDetailsAdmin = ({
   openDetails,
   setOpenDetails,
+  sentData,
 }: AdminDetailsProps) => {
   return (
     <div
@@ -86,7 +88,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            012345
+            {sentData.id}
           </span>
 
           <span
@@ -118,7 +120,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            Jackson
+            {sentData.name}
           </span>
           <span
             style={{
@@ -149,7 +151,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            Michael David
+            {sentData.client_id}
           </span>
           <span
             style={{
@@ -180,7 +182,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            Lorem ipsum
+            {sentData.project_type}
           </span>
 
           <span
@@ -212,7 +214,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            Lorem ipsum
+            {sentData.project_manager_id}
           </span>
           <span
             style={{
@@ -243,7 +245,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            01 Aug 2022
+            {sentData.start_date}
           </span>
           <span
             style={{
@@ -274,7 +276,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            24 Sep 2022
+            {sentData.end_date}
           </span>
           <span
             style={{

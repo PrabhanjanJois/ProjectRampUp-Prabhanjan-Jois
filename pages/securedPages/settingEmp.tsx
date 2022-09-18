@@ -151,10 +151,10 @@ const Settings = () => {
           <button className={styles2.modalAddProjectBtn}>Add</button>
         </div>
       </Modal>
-      <ViewDetailsEmpType
+      {/* <ViewDetailsEmpType
         openDetails={adminDetailsModal}
         setOpenDetails={setAdminDetailsModal}
-      />
+      /> */}
     </div>
   );
 };

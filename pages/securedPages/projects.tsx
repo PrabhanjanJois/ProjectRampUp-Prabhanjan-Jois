@@ -402,10 +402,10 @@ const Projects = () => {
           <button className={styles2.modalAddProjectBtn}>Add Project</button>
         </div>
       </Modal>
-      <ViewDetailsProject
+      {/* <ViewDetailsProject
         openDetails={adminDetailsModal}
         setOpenDetails={setAdminDetailsModal}
-      />
+      /> */}
     </div>
   );
 };

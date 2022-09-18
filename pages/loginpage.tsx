@@ -41,6 +41,21 @@ const LoginPage = () => {
     },
   };
 
+  // const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+  //   useFormik({
+  //     initialValues: formData,
+  //     validationSchema: loginSchema,
+  //     onSubmit: (values, action) => {
+  //       //@ts-ignore
+  //       handleSubmit1();
+  //       action.resetForm();
+  //     },
+  //   });
+  // console.log(
+  //   "🚀 ~ file: Registration.jsx ~ line 25 ~ Registration ~ errors",
+  //   errors
+  // );
+
   async function handleSubmit1(e: any) {
     e.preventDefault();
     console.log("submit clicked");
@@ -53,18 +68,22 @@ const LoginPage = () => {
 
     await axios
       .post(
-        "https://floating-falls-55336.herokuapp.com/users/sign_in",
+        "https://tranquil-hamlet-54124.herokuapp.com/users/sign_in",
         formData
       )
-      .then((response) => {
+      .then(function (response) {
         const res = response;
         console.log(res);
+        console.log(res.headers.authorization);
+
+        const token = response.headers.authorization;
+        localStorage.setItem("token", token);
       })
       .then((data) => {
         console.log("Logged In Successfully:", data);
         setEmail("");
         setPassword("");
-        router.push("/securedPages/projects");
+        router.push("/securedPages/projects1");
         Cookies.set("loggedin", "true");
       })
       .catch((error) => {

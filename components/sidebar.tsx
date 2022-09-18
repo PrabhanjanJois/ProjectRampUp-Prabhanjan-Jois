@@ -74,7 +74,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li className={styles.item} id="projects">
-                <Link href="/securedPages/projects">
+                <Link href="/securedPages/projects1">
                   <a className={styles.menuBtn}>
                     <FontAwesomeIcon
                       className={styles.icon}
@@ -125,13 +125,13 @@ const Sidebar = () => {
                   }
                 >
                   <div className={styles.subMenu}>
-                    <Link href="/securedPages/settingsSkills">
+                    <Link href="/securedPages/settingsSkill1">
                       <a>
                         {/* <FontAwesomeIcon className={styles.icon} icon={faLock} /> */}
                         <span>Skills</span>
                       </a>
                     </Link>
-                    <Link href="/securedPages/settingProj">
+                    <Link href="/securedPages/settingProj1">
                       <a>
                         {/* <FontAwesomeIcon
                     className={styles.icon}
@@ -142,7 +142,7 @@ const Sidebar = () => {
                         </span>
                       </a>
                     </Link>
-                    <Link href="/securedPages/settingEmp">
+                    <Link href="/securedPages/settingEmp1">
                       <a>
                         {/* <FontAwesomeIcon
                     className={styles.icon}

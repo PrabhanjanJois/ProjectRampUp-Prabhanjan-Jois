@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@fortawesome/fontawesome": "^1.1.8",
@@ -19,6 +20,7 @@
     "@mui/material": "^5.10.1",
     "@mui/styled-engine-sc": "^5.10.1",
     "axios": "^0.27.2",
+    "emailjs": "^4.0.1",
     "js-cookie": "^3.0.1",
     "next": "12.2.5",
     "react": "18.2.0",

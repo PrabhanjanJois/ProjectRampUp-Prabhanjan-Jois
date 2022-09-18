@@ -1,23 +1,56 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import type { NextPage } from "next";
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+const passFormat =
+  /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9])(.{8,24})$/;
+
 const forgot3 = () => {
-  const [password, setPassword] = useState("pass@123");
+  const [password, setPassword] = useState("");
+  const [resetPass, setResetPass] = useState("");
+  const [validPass, setValidPass] = useState(false);
+  const [samePass, setSamePass] = useState(false);
+
   const [passwordShown, setPasswordShown] = useState(false);
   const router = useRouter();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("the button has been clicked");
+    if (validPass) {
+      if (samePass) {
+        router.push("/forgot4");
+      }
+    }
   };
 
   const togglePassword = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+
+  let flag = false;
+  useEffect(() => {
+    if (passFormat.test(password)) {
+      setValidPass(true);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      flag = true;
+    }
+  }, [password]);
+
+  useEffect(() => {
+    if (flag) {
+      if (password !== resetPass) {
+        console.log("false set");
+        setSamePass(false);
+      }
+      if (password === resetPass) {
+        setSamePass(true);
+      }
+    }
+  }, [resetPass]);
+
   return (
     <div>
       <Head>
@@ -44,7 +77,6 @@ const forgot3 = () => {
           <Link href="/loginpage">
             <span className="BackButton">Back</span>
           </Link>
-
           <div className="ForgotText">Set new password</div>
           <div className="ForgotText1">
             Your new password must be different from <br />
@@ -54,7 +86,10 @@ const forgot3 = () => {
           <input
             className="input3"
             type={passwordShown ? "text" : "password"}
-            name="email"
+            name="password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           <i
             className={`fa ${
@@ -63,14 +98,23 @@ const forgot3 = () => {
             onClick={togglePassword}
           />
           <div className="emailRectangle"></div>
-          <div className="line-h1">
-            Minimum 8 characters with at least 1 number.
-          </div>
+          {validPass ? (
+            <div className="line-h1" style={{ color: "green" }}>
+              Your Password is Valid
+            </div>
+          ) : (
+            <div className="line-h1" style={{ width: "400px" }}>
+              Minimum 8 characters with at least 1 number and a symbol
+            </div>
+          )}
           <div className="greyPass">Password</div>
           <input
             className="input4"
             type={passwordShown ? "text" : "password"}
-            name="email"
+            name="confirmPass"
+            onChange={(e) => {
+              setResetPass(e.target.value);
+            }}
           />
           <i
             className={`fa ${
@@ -79,18 +123,20 @@ const forgot3 = () => {
             onClick={togglePassword}
           />
           <div className="passRectangle"></div>
-          <div className="line-h2">Both password must match.</div>
-          <button
-            className="InstructionButton2"
-            onClick={() => {
-              router.push("/forgot4");
-            }}
+
+          <div
+            className="line-h2"
+            style={!samePass ? { color: "#212121" } : { color: "green" }}
           >
+            Both password must match.
+          </div>
+
+          <button className="InstructionButton2" onClick={handleSubmit}>
             <p className="inner-btn">Reset Password</p>
           </button>
-          <Link href="/loginpage">
-            <span className="cancelButton2"> Cancel</span>
-          </Link>
+          <a href="#" className="cancelButton2">
+            Cancel
+          </a>
         </div>
       </main>
     </div>

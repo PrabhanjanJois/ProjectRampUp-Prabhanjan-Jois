@@ -1,15 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import styles from "../../styles/viewDetails.module.css";
+import styles from "../../styles/ViewDetails.module.css";
 
 type AdminDetailsProps = {
   openDetails: boolean;
   setOpenDetails: any;
+  sentData: any;
 };
 
 const ViewDetailsAdmin = ({
   openDetails,
   setOpenDetails,
+  sentData,
 }: AdminDetailsProps) => {
   return (
     <div
@@ -87,7 +89,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            012345
+            {sentData.name}
           </span>
 
           <span
@@ -120,7 +122,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            Jackson
+            {sentData.status}
           </span>
 
           <span
@@ -153,11 +155,7 @@ const ViewDetailsAdmin = ({
               position: "absolute",
             }}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
+            {sentData.description}
           </span>
         </div>
       </div>

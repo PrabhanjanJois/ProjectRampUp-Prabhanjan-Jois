@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import router from "next/router";
 const Topbar = () => {
   const logOut = () => {
+    localStorage.removeItem("token");
     Cookies.remove("loggedin");
     router.push("/loginpage");
   };
